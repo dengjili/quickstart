@@ -6,7 +6,7 @@
 快速入门列表
 ----------
 
-* markdown
+* [markdown教程](markdown.md)
 
   markdown语法是很方便的编写文档的工具，很有必须要掌握
 
