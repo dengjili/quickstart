@@ -8,9 +8,13 @@
 
 * [markdown教程](markdown.md)
 
-  markdown语法是很方便的编写文档的工具，很有必须要掌握
+  markdown语法是很方便的编写文档的工具。
+  
+* [vim教程](vim.md)
 
-* shell
+  主流服务端内置脚本，是使用服务器基础
 
-  主流服务端内置脚本，有必要掌握
+* [shell教程](shell.md)
+
+  主流服务端内置脚本，是使用服务器基础
 
