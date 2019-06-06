@@ -1,6 +1,4 @@
-[toc]
-
-markdown基本了解
+markdown快速了解
 ============
 
 定了一套简易规则，生成目标html的轻量级标记语言。
@@ -31,7 +29,7 @@ markdown例子：
 	
 段落
 ----------------
-像我们平时一段内容为一段，对应HTML 中 &lt;blockquote&gt; 标签，连续两个回车即可。
+像我们平时一段内容为一段，对应HTML 中 &lt;blockquote&gt; 标签，连续两个回车即可。或使用两个以上空格加上回车。
 
 markdown例子：
 
@@ -75,7 +73,7 @@ markdown例子：
 	
 字体
 ----------------
-支持斜体、加粗等，分别对应HTML 中 &lt;em&gt;、&lt;strong&gt;标签
+支持斜体、加粗、删除等，分别对应HTML 中 &lt;em&gt;、&lt;strong&gt;、&lt;s&gt;标签
 
 markdown例子：
 
@@ -84,6 +82,8 @@ markdown例子：
 
 	Use two asterisks for **strong emphasis**.
 	Or, if you prefer, __use two underscores instead__.
+	
+	~~345~~
 
 实际输出：
 
@@ -93,6 +93,27 @@ markdown例子：
 	<p>Use two asterisks for <strong>strong emphasis</strong>.
 	Or, if you prefer, <strong>use two underscores instead</strong>.</p>
 	
+	<s>345</s>
+	
+分割线
+
+可以使用3个连续`*` 或 `_` 或 `-`表示分割符号，对应HTML 中 &lt;hr&gt;标签
+
+markdown例子：
+
+	***
+	___
+
+	---
+
+实际输出：
+	
+	<hr/>
+	
+	<hr/>
+	
+	<hr/>
+
 列表
 ----------------
 列表分有序和序列之分，分别对应HTML 中 &lt;ul&gt;、&lt;ol&gt;标签
@@ -280,11 +301,32 @@ markdown例子：
 </blockquote>
 ```
 
-测试
+表格
+---------
+markdown制作表格
 
+Markdown 制作表格使用 `|` 来分隔不同的单元格，使用 `-` 来分隔表头和其他行。
+
+markdown例子：
+
+	|  表头   | 表头  |
+	|  -  | --  |
+	| 单元格  | 单元格 |
+	| 单元格  | 单元格 |
+
+实现效果
 |  表头   | 表头  |
-|  ------  | --------  |
+|  -  | --  |
 | 单元格  | 单元格 |
 | 单元格  | 单元格 |
 
-[返回首页](README.md)
+我们可以设置表格的对齐方式：
+
+* -: 设置内容和标题栏居右对齐。
+* :- 设置内容和标题栏居左对齐。
+* :-: 设置内容和标题栏居中对齐。
+
+
+
+	
+[首页](README.md "首页")
