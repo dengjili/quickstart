@@ -1,7 +1,7 @@
 [返回首页](README.md)
 
 
-markdown快速了解
+markdown基本了解
 ============
 
 定了一套简易规则，生成目标html的轻量级标记语言。
@@ -191,3 +191,99 @@ markdown例子：
 	title="Google">Google</a> than from <a href="http://search.yahoo.com/"
 	title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/"
 	title="MSN Search">MSN</a>.</p>
+	
+图像
+----------------
+图像的markdown语法与超链接非常接近，只是开头多了!符号，对应HTML 中 &lt;img&gt;标签
+
+markdown例子：
+
+	![alt text](/path/to/img.jpg "Title")
+
+***
+	![alt text][id]
+
+	[id]: /path/to/img.jpg "Title"
+
+两种都实际输出：
+
+	<p>This is an <a href="http://example.com/">example link</a>.</p>
+	
+其中超链接还有一个title属性可选
+
+	This is an [example link](http://example.com/ "With a Title").
+
+实际输出：
+	
+	<img src="/path/to/img.jpg" alt="alt text" title="Title" />
+
+自动转义
+----------------
+
+使用特殊符号，如`<`、`&`、`>`等符号，使用反引号（\`）括起来，期间转义字符会自动转义
+
+markdown例子：
+
+	I strongly recommend against using any `<blink>` tags.
+
+	I wish SmartyPants used named entities like `&mdash;`
+	instead of decimal-encoded entites like `&#8212;`.
+
+
+实际输出：
+
+	<p>I strongly recommend against using any
+	<code>&lt;blink&gt;</code> tags.</p>
+
+	<p>I wish SmartyPants used named entities like
+	<code>&amp;mdash;</code> instead of decimal-encoded
+	entites like <code>&amp;#8212;</code>.</p>
+
+代码块
+----------------
+
+保留程序原有格式，有两种方式可以使用
+* 1个tab键，或者四个空格
+* 使用三个反引号\`\`\`三个符号形成闭合区间
+
+markdown例子：
+
+    四个空格<blockquote>
+    四个空格    <p>For example.</p>
+    四个空格</blockquote>
+	
+	或
+	
+	一个tab键<blockquote>
+	一个tab键    <p>For example.</p>
+	一个tab键</blockquote>
+	
+	或
+	
+	```
+    <blockquote>
+        <p>For example.</p>
+    </blockquote>
+	```
+
+三种HTML输出：
+
+	<pre><code>&lt;blockquote&gt;
+    &lt;p&gt;For example.&lt;/p&gt;
+	&lt;/blockquote&gt;
+	</code></pre>
+
+
+实现效果
+```
+<blockquote>
+    <p>For example.</p>
+</blockquote>
+```
+
+测试
+
+|  表头   | 表头  |
+|  ------  | --------  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
